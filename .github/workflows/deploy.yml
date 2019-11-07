@@ -1,4 +1,4 @@
-name: Generate static pages
+name: Create static site
 
 on:
   push:
@@ -23,6 +23,6 @@ jobs:
       - name: Deploy on GitHub Pages
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
         with:
-          repo-token: ${{ secrets.GH_PAT }}
           site-directory: './dist'
           deploy-branch: master
+          commit-message: 'Deploy site'
